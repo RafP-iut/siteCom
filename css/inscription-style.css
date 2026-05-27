@@ -1,0 +1,158 @@
+/* --- CODE SPÉCIFIQUE AU FORMULAIRE D'INSCRIPTION --- */
+
+.form-hero {
+    padding: 3rem 2rem 1.5rem 2rem;
+    text-align: center;
+    background-color: var(--light-gray);
+}
+
+.form-hero h1 {
+    color: var(--IUT-blue);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-hero h1 span {
+    color: var(--UT-red);
+}
+
+.form-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 2rem auto 5rem auto;
+    padding: 0 1.5rem;
+}
+
+form {
+    background-color: var(--bg-white);
+    border: 1px solid #E9ECEF;
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+    border: none;
+    border-bottom: 1px solid #E9ECEF;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+fieldset:last-of-type {
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--IUT-blue);
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.form-help {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-group-inline .form-group {
+    flex: 1;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: var(--IUT-blue);
+    box-shadow: 0 0 0 3px rgba(20, 45, 84, 0.15);
+}
+
+/* Gestion spécifique du champ précision caché sous "Autre" */
+#statut-precision {
+    margin-top: 0.75rem;
+}
+
+/* Styles pour les Radios et Checkboxes */
+.radio-label, 
+.checkbox-group label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-weight: normal;
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.radio-label:hover, 
+.checkbox-group label:hover {
+    background-color: var(--light-gray);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-top: 0.25rem;
+    accent-color: var(--UT-red); /* Utilise la couleur rouge du logo pour les boutons cochés */
+    transform: scale(1.1);
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.form-submit button.btn {
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: auto;
+    padding: 1rem 3rem;
+}
+
+/* Version mobile du formulaire */
+@media (max-width: 600px) {
+    .form-group-inline {
+        flex-direction: column;
+        gap: 0;
+    }
+    form {
+        padding: 1.5rem;
+    }
+}
