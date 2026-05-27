@@ -1,0 +1,199 @@
+:root {
+    --UT-red: #D31018;       /* Rouge Université Toulouse Capitole */
+    --IUT-blue: #142D54;     /* Bleu nuit IUT */
+    --bg-white: #FFFFFF;     /* Fond blanc demandé */
+    --light-gray: #F8F9FA;   /* Gris très clair pour les zones de contenu */
+    --text-dark: #212529;    /* Couleur du texte principal */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+    border-bottom: 3px solid var(--UT-red);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-white);
+}
+
+.logo-placeholder {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--IUT-blue);
+}
+
+.logo-placeholder span {
+    color: var(--UT-red);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--IUT-blue);
+    font-weight: 600;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--UT-red);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--bg-white) 100%);
+    border-bottom: 1px solid #E9ECEF;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--IUT-blue);
+    margin-bottom: 1rem;
+}
+
+.hero h1 span {
+    color: var(--UT-red);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--UT-red);
+    color: var(--bg-white);
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #A80D13;
+    transform: translateY(-2px);
+}
+
+/* --- MAIN FEATURES --- */
+.features {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: var(--light-gray);
+    padding: 2.5rem;
+    border-left: 5px solid var(--IUT-blue);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.feature-card h3 {
+    color: var(--IUT-blue);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+/* --- LIVE INFO BANNER --- */
+.info-banner {
+    background-color: var(--IUT-blue);
+    color: var(--bg-white);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.info-banner h2 {
+    margin-bottom: 1rem;
+    color: var(--bg-white);
+}
+
+.info-banner .date {
+    font-size: 1.5rem;
+    color: #FFF;
+    font-weight: bold;
+    background-color: var(--UT-red);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+/* --- PARTNERS --- */
+.partners {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--bg-white);
+}
+
+.partners p {
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.partner-logo {
+    font-weight: bold;
+    color: var(--IUT-blue);
+    opacity: 0.8;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #111;
+    color: #AAA;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--bg-white);
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav a {
+        margin: 0 1rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
