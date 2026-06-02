@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devenir Bénévole - Repair Café IUT de Rodez</title>
+    <link rel="stylesheet" href="../css/inscription-style.css">
+    <link rel="stylesheet" href="../css/index-style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-placeholder">
+            <a href="index.html">UNIVERSITÉ TOULOUSE CAPITOLE | <span>IUT Rodez</span></a>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Accueil</a>
+            <a href="contact.html">Contact</a>
+            <a href="inscription.html">Formulaire Bénévole</a>
+        </nav>
+    </header>
+
+    <section class="form-hero">
+        <h1>Rejoignez l'équipe du <span>Repair Café</span></h1>
+        <p>Que vous soyez un expert du tournevis, un pro de l'organisation ou simplement curieux d'apprendre, votre aide nous est précieuse ! Prenez 2 minutes pour remplir ce questionnaire de compétences.</p>
+    </section>
+
+    <main class="form-container">
+        <form action="#" method="POST">
+            
+            <fieldset>
+                <legend>Vos Informations</legend>
+                
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse Email (IUT / Universitaire de préférence)</label>
+                    <input type="email" id="email" name="email" required placeholder="exemple@iut-rodez.fr">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre Statut à l'IUT</legend>
+                <div class="form-group">
+                    <label class="radio-label">
+                        <input type="radio" name="statut" value="etudiant" required> Étudiant(e)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="statut" value="professeur"> Enseignant(e) / Enseignant(e)-Chercheur
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="statut" value="personnel"> Personnel administratif / technique
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="statut" value="autre" id="statut-autre"> Autre (veuillez préciser ci-dessous)
+                    </label>
+                    <input type="text" id="statut-precision" name="statut_precision" placeholder="Ex: Ancien étudiant, membre du RACK...">
+                </div>
+
+                <div class="form-group">
+                    <label for="filiere">Filière, département ou service (Ex: GEII, Info, TC, Administration...)</label>
+                    <input type="text" id="filiere" name="filiere" placeholder="Votre département ou composante">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Qu'est-ce qui vous intéresse dans le projet ?</legend>
+                <p class="form-help">Plusieurs choix possibles :</p>
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="interets" value="reparer"> <strong>Réparer :</strong> Diagnostiquer et démonter les appareils en panne.
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interets" value="accueil"> <strong>Faire l'accueil :</strong> Accueillir les visiteurs, récupérer les objets, répondre aux questions.
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interets" value="mails"> <strong>Communication :</strong> Répondre aux e-mails, gérer le site internet ou les réseaux sociaux.
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Niveau de disponibilité</legend>
+                <p class="form-help">Le Repair Café repose sur le bénévolat, nous nous adaptons à vos emplois du temps !</p>
+                <div class="form-group">
+                    <label class="radio-label">
+                        <input type="radio" name="dispo" value="moins-1h" required> Moins d'1 heure par semaine (Aide ponctuelle)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="dispo" value="1h"> Environ 1 heure par semaine
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="dispo" value="plus-1h"> Plus d'1 heure par semaine
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="dispo" value="midi-deux"> Principalement entre midi et deux (12h30 - 13h45)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="dispo" value="evenementiel"> Uniquement lors des grands événements / sessions mensuelles
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre niveau actuel en réparation / bricolage</legend>
+                <div class="form-group">
+                    <label class="radio-label">
+                        <input type="radio" name="niveau" value="debutant" required> <strong>Débutant(e) complet :</strong> Je suis là pour apprendre et observer.
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="niveau" value="bricoleur"> <strong>Bricoleur(se) occasionnel(le) :</strong> Je sais utiliser un tournevis et j'ai des bases.
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="niveau" value="intermediaire"> <strong>À l'aise :</strong> J'ai déjà ouvert des appareils, je sais souder ou utiliser un multimètre.
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="niveau" value="expert"> <strong>Expert(e) / Professionnel(le) :</strong> L'électronique n'a aucun secret pour moi.
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Si vous souhaitez réparer, quels types d'appareils préférez-vous ?</legend>
+                <div class="form-group checkbox-group">
+                    <label><input type="checkbox" name="appareils" value="informatique"> Informatique (PC portables, claviers, souris...)</label>
+                    <label><input type="checkbox" name="appareils" value="smartphones"> Smartphones & Tablettes (Écrans, batteries...)</label>
+                    <label><input type="checkbox" name="appareils" value="electromenager"> Petit électroménager (Machines à café, bouilloires, grille-pain...)</label>
+                    <label><input type="checkbox" name="appareils" value="audio"> Audio & Luminaire (Enceintes, lampes, casques audio...)</label>
+                </div>
+            </fieldset>
+
+            <div class="form-submit">
+                <button type="submit" class="btn">Envoyer ma candidature</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Repair Café - IUT de Rodez. Tous droits réservés.</p>
+        <p>Projet tutoré en collaboration avec le groupe de réparation ruthénois <a href="https://www.asso-rack.fr/" target="_blank">Le RACK</a>.</p>
+        <p><a href="legal/poltiques_de_confidentialite.pdf" target="_blank">Politiques de confidentialité</a></p>
+        <p><a href="legal/mentions_legales.pdf" target="_blank">Mentions légales</a></p>
+    </footer>
+
+</body>
+</html>
