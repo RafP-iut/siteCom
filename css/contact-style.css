@@ -1,5 +1,3 @@
-/* --- CODE SPÉCIFIQUE AU FORMULAIRE D'INSCRIPTION --- */
-
 :root {
     --UT-red: #D31018;       /* Rouge Université Toulouse Capitole */
     --IUT-blue: #142D54;     /* Bleu nuit IUT */
@@ -47,6 +45,11 @@ nav a {
     font-weight: 600;
     margin-left: 2rem;
     transition: color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 nav a:hover, nav a.active {
@@ -200,160 +203,104 @@ footer a {
     }
 }
 
-.form-hero {
-    padding: 3rem 2rem 1.5rem 2rem;
-    text-align: center;
-    background-color: var(--light-gray);
+.contact-section {
+    max-width: 800px;
+    margin: 4rem auto; /* Centre le formulaire au milieu de la page */
+    padding: 0 2rem;
 }
 
-.form-hero h1 {
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-header h1 {
     color: var(--IUT-blue);
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.form-hero h1 span {
-    color: var(--UT-red);
-}
-
-.form-hero p {
-    max-width: 700px;
-    margin: 0 auto;
+.contact-header p {
     color: #555;
+    font-size: 1.1rem;
 }
 
 .form-container {
-    max-width: 800px;
-    margin: 2rem auto 5rem auto;
-    padding: 0 1.5rem;
-}
-
-form {
-    background-color: var(--bg-white);
-    border: 1px solid #E9ECEF;
-    border-radius: 8px;
-    padding: 2.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-fieldset {
-    border: none;
-    border-bottom: 1px solid #E9ECEF;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-}
-
-fieldset:last-of-type {
-    border-bottom: none;
-    margin-bottom: 1rem;
-}
-
-legend {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--IUT-blue);
-    margin-bottom: 1rem;
-    padding: 0;
-}
-
-.form-help {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1rem;
-    font-style: italic;
+    background-color: var(--light-gray);
+    padding: 3rem;
+    border-top: 5px solid var(--IUT-blue);
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .form-group {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Met le label au-dessus du champ */
 }
 
-.form-group-inline {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.form-group-inline .form-group {
-    flex: 1;
-}
-
-label {
+.form-group label {
     font-weight: 600;
+    color: var(--IUT-blue);
     margin-bottom: 0.5rem;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--IUT-blue);
+    box-shadow: 0 0 0 2px rgba(211, 16, 24, 0.1);
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin: 2rem 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.3rem;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    font-size: 0.9rem;
     color: var(--text-dark);
 }
 
-input[type="text"],
-input[type="email"],
-select {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #CED4DA;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
+.checkbox-group a {
+    color: var(--UT-red);
+    text-decoration: underline;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus {
-    outline: none;
-    border-color: var(--IUT-blue);
-    box-shadow: 0 0 0 3px rgba(20, 45, 84, 0.15);
+.footer-links {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
 }
 
-/* Gestion spécifique du champ précision caché sous "Autre" */
-#statut-precision {
-    margin-top: 0.75rem;
+.footer-links a {
+    color: var(--bg-white);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
 }
 
-/* Styles pour les Radios et Checkboxes */
-.radio-label, 
-.checkbox-group label {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    font-weight: normal;
-    cursor: pointer;
-    margin-bottom: 0.75rem;
-    padding: 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+.footer-links a:hover {
+    color: var(--UT-red);
 }
-
-.radio-label:hover, 
-.checkbox-group label:hover {
-    background-color: var(--light-gray);
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    margin-top: 0.25rem;
-    accent-color: var(--UT-red); /* Utilise la couleur rouge du logo pour les boutons cochés */
-    transform: scale(1.1);
-}
-
-.form-submit {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.form-submit button.btn {
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    width: auto;
-    padding: 1rem 3rem;
-}
-
-/* Version mobile du formulaire */
-@media (max-width: 600px) {
-    .form-group-inline {
-        flex-direction: column;
-        gap: 0;
-    }
-    form {
-        padding: 1.5rem;
-    }
-}
-
